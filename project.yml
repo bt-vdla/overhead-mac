@@ -1,0 +1,35 @@
+name: Overhead
+options:
+  bundleIdPrefix: com.btstd
+  deploymentTarget:
+    macOS: "26.0"
+settings:
+  base:
+    DEVELOPMENT_TEAM: P6SP5RHNLV
+packages:
+  OverheadCore:
+    path: Core
+targets:
+  Overhead:
+    type: application
+    platform: macOS
+    sources: [App]
+    dependencies:
+      - package: OverheadCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.btstd.overhead
+        SWIFT_VERSION: "6.0"
+        MARKETING_VERSION: "0.1"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Overhead
+        INFOPLIST_KEY_LSUIElement: YES
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+        INFOPLIST_KEY_NSLocationUsageDescription: "Overhead uses your location to tell when an aircraft is passing over you."
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Overhead uses your location to tell when an aircraft is passing over you."
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "Apple Development"
+        ENABLE_APP_SANDBOX: YES
+        ENABLE_OUTGOING_NETWORK_CONNECTIONS: YES
+        ENABLE_RESOURCE_ACCESS_LOCATION: YES
