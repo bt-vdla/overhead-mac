@@ -50,8 +50,8 @@ If either API differs, record a session in Overhead (Source → Record) and fix 
 - **Record → Replay.** Recording saves every live response under `~/Library/Containers/com.btstd.overhead/Data/Library/Application Support/Overhead/Recordings/<date>/`, along with `meta.json` for the observer. Replay loops the newest recording.
 
 ```bash
-cd Overhead/Core && swift test          # math, decoding, phase machine
-cd Overhead && xcodegen && open Overhead.xcodeproj
+cd Core && swift test          # math, decoding, phase machine
+xcodegen && open Overhead.xcodeproj
 ```
 
 Set `DEVELOPMENT_TEAM` in `project.yml` before building.
